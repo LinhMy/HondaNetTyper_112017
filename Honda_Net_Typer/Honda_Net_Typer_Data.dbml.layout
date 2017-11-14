@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Honda_Net_Typer_Data">
+  <DataContextMoniker Name="/Honda_Net_Typer_DataDataContext" />
+  <nestedChildShapes>
+    <classShape Id="8666d224-aeb6-4963-8755-a34c8134c3e5" absoluteBounds="0.75, 0.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/Honda_Net_Typer_DataDataContext/tbl_Batch" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8e998ed8-15b7-46d7-add2-f567c05d244c" absoluteBounds="0.765, 1.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7333dc90-99a9-4e21-baed-401e8d383f9e" absoluteBounds="3.75, 0.75, 2, 1.9631982421875">
+      <DataClassMoniker Name="/Honda_Net_Typer_DataDataContext/tbl_MissImage_DeSo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b0c6f0fd-4409-414b-b2e5-99c56f396253" absoluteBounds="3.765, 1.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="63ed3cc4-12f0-40bf-8a85-9d697dde3b5c" absoluteBounds="6.75, 3.75, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/Honda_Net_Typer_DataDataContext/tbl_MissCheck_DeSo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5acf66ed-b40a-4f6b-a1af-1489fba29871" absoluteBounds="6.765, 4.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="46e85406-2f6e-4c2e-a341-3f699d949e92" absoluteBounds="7, 0.625, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/Honda_Net_Typer_DataDataContext/tbl_Image" />
+      <nestedChildShapes>
+        <elementListCompartment Id="655bf21a-b98e-4bec-849a-3f15908ceecc" absoluteBounds="7.015, 1.085, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="89db867b-148d-4e91-9f9b-f05ddd3dafc5" absoluteBounds="0.75, 3.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/Honda_Net_Typer_DataDataContext/tbl_DeSo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8f0f0023-2e92-4b6b-b84e-7e84b24aa855" absoluteBounds="0.765, 4.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b243266f-157f-4d36-8824-f86e08a1e4ca" absoluteBounds="3.75, 3.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/Honda_Net_Typer_DataDataContext/tbl_DeSo_BackUp" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a9c991fe-a2b0-463a-a2af-a7f2ea3b555b" absoluteBounds="3.765, 4.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

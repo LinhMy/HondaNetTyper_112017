@@ -1,0 +1,514 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DatabaseDataEntryBPO" Class="Honda_Net_Typer_BPODataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=10.10.10.248;Initial Catalog=DatabaseDataEntryBPO;Persist Security Info=True;User ID=sa" SettingsObjectName="Honda_Net_Typer.Properties.Settings" SettingsPropertyName="DatabaseDataEntryBPOConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ContentChatSocket" Member="ContentChatSockets">
+    <Type Name="ContentChatSocket">
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Content_chat" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="GhiChu" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="datacreate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_VersionHistory" Member="tbl_VersionHistories">
+    <Type Name="tbl_VersionHistory">
+      <Column Name="IDProject" Type="System.String" DbType="NVarChar(150) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Version" Type="System.String" DbType="NVarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="GhiChu" Type="System.String" DbType="NVarChar(4000) NOT NULL" CanBeNull="false" />
+      <Column Name="[User]" Member="User" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="NgayThayDoi" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="tbl_Version_tbl_VersionHistory" Member="tbl_Version" ThisKey="IDProject" OtherKey="IDProject" Type="tbl_Version" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.sysdiagrams" Member="sysdiagrams">
+    <Type Name="sysdiagram">
+      <Column Name="name" Type="System.String" DbType="NVarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="principal_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="diagram_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="version" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="definition" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Batch_Entry" Member="tbl_Batch_Entries">
+    <Type Name="tbl_Batch_Entry">
+      <Column Name="IDBatch" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="fIDProject" Type="System.String" DbType="NVarChar(150) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="fBatchName" Type="System.String" DbType="NVarChar(150) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="fDateCreated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="fUserCreate" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="fPathPicture" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="fLocation" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="fLoaiPhieu" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="fSoLuongAnh" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="fTimeStart" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="fTimeEnd" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="fDeadlineNotificationTime" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_ChiNhanh" Member="tbl_ChiNhanhs">
+    <Type Name="tbl_ChiNhanh">
+      <Column Name="ChiNhanh" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="SoDT" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="GhiChu" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_ChiTietTienDo" Member="tbl_ChiTietTienDos">
+    <Type Name="tbl_ChiTietTienDo">
+      <Column Name="id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDProject" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="fBatchName" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Idimage" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="UserDeSo" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="UserDeJP" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="DateCreate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Group" Member="tbl_Groups">
+    <Type Name="tbl_Group">
+      <Column Name="GroupID" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="GroupName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="GhiChu" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_LoginTime" Member="tbl_LoginTimes">
+    <Type Name="tbl_LoginTime">
+      <Column Name="Username" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="TimeLogin" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TimeLogout" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TimeBlog" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TimeFree" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastRequest" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MachineName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DomainUsername" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="IPAddress" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Token" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ID_int_auto" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Project" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_NhanVien" Member="tbl_NhanViens">
+    <Type Name="tbl_NhanVien">
+      <Column Name="ID_MaNhanVien" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="FullName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="GroupNV" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NgayVaoCongTy" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NgayNghiViec" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ChucVu" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="IDPhongBan" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="GhiChu" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_PhanCong" Member="tbl_PhanCongs">
+    <Type Name="tbl_PhanCong">
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="IDProject" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="GhiChu" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_PhongBan" Member="tbl_PhongBans">
+    <Type Name="tbl_PhongBan">
+      <Column Name="IDPhongBan" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="TenPhong" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ChiNhanh" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Project" Member="tbl_Projects">
+    <Type Name="tbl_Project">
+      <Column Name="IDProject" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="ProjectName" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="DateCreate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Deadline" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Enable" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Usercreate" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ThuTuUuTien" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GhiChu" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Role" Member="tbl_Roles">
+    <Type Name="tbl_Role">
+      <Column Name="RoleID" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="RoleName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="GhiChu" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_TienDo" Member="tbl_TienDos">
+    <Type Name="tbl_TienDo">
+      <Column Name="id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDProject" Type="System.String" DbType="NVarChar(150) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="fBatchName" Type="System.String" DbType="NVarChar(150) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Idimage" Type="System.String" DbType="NVarChar(150) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TienDoDeSo" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="TienDoDeJP" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="UserCheckDeSo" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="UserCheckDeJP" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="DateCreate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_TokenLogin" Member="tbl_TokenLogins">
+    <Type Name="tbl_TokenLogin">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="IDProject" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Token" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="DateLogin" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_User" Member="tbl_Users">
+    <Type Name="tbl_User">
+      <Column Name="Username" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="IDRole" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="IDNhanVien" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Group_Level" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="FullName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NotGoodUser" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DateEdit" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsDelete" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="LogEdit" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_User_copy" Member="tbl_User_copies">
+    <Type Name="tbl_User_copy">
+      <Column Name="Username" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="IDRole" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="IDNhanVien" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Group_Level" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="FullName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NotGoodUser" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_User_copy1" Member="tbl_User_copy1s">
+    <Type Name="tbl_User_copy1">
+      <Column Name="Username" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="IDRole" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="IDNhanVien" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Group_Level" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="FullName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NotGoodUser" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_User_copy2" Member="tbl_User_copy2s">
+    <Type Name="tbl_User_copy2">
+      <Column Name="Username" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="IDRole" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="IDNhanVien" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Group_Level" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="FullName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NotGoodUser" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DateEdit" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsDelete" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Version" Member="tbl_Versions">
+    <Type Name="tbl_Version">
+      <Column Name="IDProject" Type="System.String" DbType="NVarChar(150) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IDVersion" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ID_int_auto" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MoTaChucNangMoi" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="OutSource" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="tbl_Version_tbl_VersionHistory" Member="tbl_VersionHistories" ThisKey="IDProject" OtherKey="IDProject" Type="tbl_VersionHistory" />
+    </Type>
+  </Table>
+  <Function Name="dbo.ChangeIsDelete" Method="ChangeIsDelete">
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="IsDelete" Parameter="isDelete" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdateUsername_NEW" Method="UpdateUsername_NEW">
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="Password" Parameter="password" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="notgooduser" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="IDRole" Parameter="iDRole" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="FullName" Parameter="fullName" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="GroupLevel" Parameter="groupLevel" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="UserEdit" Parameter="userEdit" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="ip" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="pcName" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="doMainName" Type="System.String" DbType="NVarChar(255)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CheckLevelUser" Method="CheckLevelUser">
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(255)" />
+    <ElementType Name="CheckLevelUserResult">
+      <Column Name="NotGoodUser" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CheckTimeDeadline" Method="CheckTimeDeadline">
+    <ElementType Name="CheckTimeDeadlineResult">
+      <Column Name="fIDProject" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ChiTietTienDoDeJP_EnTry" Method="ChiTietTienDoDeJP_EnTry">
+    <Parameter Name="fbatchname" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="idproject" Type="System.String" DbType="NVarChar(255)" />
+    <ElementType Name="ChiTietTienDoDeJP_EnTryResult">
+      <Column Name="idimage" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="Checker" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="ThongTin" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ChiTietTienDoDeSo_Entry" Method="ChiTietTienDoDeSo_Entry">
+    <Parameter Name="fbatchname" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="idproject" Type="System.String" DbType="NVarChar(255)" />
+    <ElementType Name="ChiTietTienDoDeSo_EntryResult">
+      <Column Name="idimage" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="Checker" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="ThongTin" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ChiTietUserDeJP_Entry" Method="ChiTietUserDeJP_Entry">
+    <Parameter Name="idproject" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="fbatchname" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="idimage" Type="System.String" DbType="NVarChar(255)" />
+    <ElementType Name="ChiTietUserDeJP_EntryResult">
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ChiTietUserDeSo_Entry" Method="ChiTietUserDeSo_Entry">
+    <Parameter Name="idproject" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="fbatchname" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="idimage" Type="System.String" DbType="NVarChar(255)" />
+    <ElementType Name="ChiTietUserDeSo_EntryResult">
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Delete_PhanCong" Method="Delete_PhanCong">
+    <Parameter Name="username" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="idproject" Type="System.String" DbType="NVarChar(150)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeleteDuAn" Method="DeleteDuAn">
+    <Parameter Name="IDProject" Parameter="iDProject" Type="System.String" DbType="NVarChar(150)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeleteUsername" Method="DeleteUsername">
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="NVarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.GetList_Batch_BaoDeadline" Method="GetList_Batch_BaoDeadline">
+    <Parameter Name="fIdProject" Type="System.String" DbType="NVarChar(255)" />
+    <ElementType Name="GetList_Batch_BaoDeadlineResult">
+      <Column Name="fBatchName" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetList_Batch_Deadline" Method="GetList_Batch_Deadline">
+    <Parameter Name="IDProject" Parameter="iDProject" Type="System.String" DbType="NVarChar(150)" />
+    <ElementType Name="GetList_Batch_DeadlineResult">
+      <Column Name="fBatchName" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="fTimeStart" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="fTimeEnd" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="fDeadlineNotificationTime" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetList_Project_UserPerform" Method="GetList_Project_UserPerform">
+    <Parameter Name="username" Type="System.String" DbType="NVarChar(100)" />
+    <ElementType Name="GetList_Project_UserPerformResult">
+      <Column Name="IDProject" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetListProject" Method="GetListProject">
+    <ElementType Name="GetListProjectResult">
+      <Column Name="IDProject" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="MoTaChucNangMoi" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetListRole" Method="GetListRole">
+    <ElementType Name="GetListRoleResult">
+      <Column Name="RoleID" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="RoleName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="GhiChu" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetListUser" Method="GetListUser">
+    <ElementType Name="GetListUserResult">
+      <Column Name="Username" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="FullName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="IDRole" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Group_Level" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NotGoodUser" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetListUser_PhanCong" Method="GetListUser_PhanCong">
+    <Parameter Name="idproject" Type="System.String" DbType="NVarChar(150)" />
+    <ElementType Name="GetListUser_PhanCongResult">
+      <Column Name="Username" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="IDRole" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="FullName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="TrangThai" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetListUserToKiemDinh" Method="GetListUserToKiemDinh">
+    <ElementType Name="GetListUserToKiemDinhResult">
+      <Column Name="Username" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="FullName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="IDRole" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Group_Level" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetRoLeCheckLogin" Method="GetRoLeCheckLogin">
+    <Parameter Name="username" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="role" Type="System.String" DbType="NVarChar(100)" Direction="InOut" />
+    <ElementType Name="GetRoLeCheckLoginResult">
+      <Column Name="" Member="Column1" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetRoLeToKiemDinh" Method="GetRoLeToKiemDinh">
+    <Parameter Name="username" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="role" Type="System.String" DbType="NVarChar(100)" Direction="InOut" />
+    <ElementType Name="GetRoLeToKiemDinhResult">
+      <Column Name="" Member="Column1" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Insert_PhanCong" Method="Insert_PhanCong">
+    <Parameter Name="username" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="idproject" Type="System.String" DbType="NVarChar(150)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.InsertLoginTime" Method="InsertLoginTime">
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="TimeLogin" Parameter="timeLogin" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="WindowUser" Parameter="windowUser" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="MachineName" Parameter="machineName" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="IPAddress" Parameter="iPAddress" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="Token" Parameter="token" Type="System.String" DbType="NVarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.InsertLoginTime_new" Method="InsertLoginTime_new">
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="TimeLogin" Parameter="timeLogin" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="WindowUser" Parameter="windowUser" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="MachineName" Parameter="machineName" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="IPAddress" Parameter="iPAddress" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="Token" Parameter="token" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="project" Type="System.String" DbType="NVarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.InsertUsername" Method="InsertUsername">
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="Password" Parameter="password" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="IDRole" Parameter="iDRole" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="NhanVien" Parameter="nhanVien" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="GroupLevel" Parameter="groupLevel" Type="System.String" DbType="NVarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.InsertUsername_BapCaoLuong" Method="InsertUsername_BapCaoLuong">
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="Password" Parameter="password" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="IDRole" Parameter="iDRole" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="NhanVien" Parameter="nhanVien" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="GroupLevel" Parameter="groupLevel" Type="System.String" DbType="NVarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.InsertUsername_New" Method="InsertUsername_New">
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="Password" Parameter="password" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="notgooduser" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="IDRole" Parameter="iDRole" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="FullName" Parameter="fullName" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="GroupLevel" Parameter="groupLevel" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="UserAdd" Parameter="userAdd" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="ip" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="pcName" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="doMainName" Type="System.String" DbType="NVarChar(255)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.KiemTraLogin" Method="KiemTraLogin">
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="password" Type="System.String" DbType="NVarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.proc_TaoHistoryVersion" Method="proc_TaoHistoryVersion">
+    <Parameter Name="idproject" Type="System.String" DbType="NVarChar(150)" />
+    <Parameter Name="version" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="ghichu" Type="System.String" DbType="NVarChar(4000)" />
+    <Parameter Name="user" Type="System.String" DbType="NVarChar(255)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ResetToken" Method="ResetToken">
+    <Parameter Name="username" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="idproject" Type="System.String" DbType="NVarChar(150)" />
+    <Parameter Name="Token" Parameter="token" Type="System.String" DbType="NVarChar(255)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ThongKeDeJP" Method="ThongKeDeJP">
+    <Parameter Name="fbatchname" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="idproject" Type="System.String" DbType="NVarChar(255)" />
+    <ElementType Name="ThongKeDeJPResult">
+      <Column Name="name" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="soluong" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ThongKeDeSo" Method="ThongKeDeSo">
+    <Parameter Name="fbatchname" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="idproject" Type="System.String" DbType="NVarChar(255)" />
+    <ElementType Name="ThongKeDeSoResult">
+      <Column Name="name" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="soluong" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.updateNotGoodUser" Method="updateNotGoodUser">
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="notgooduser" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.updateNotGoodUser_New" Method="updateNotGoodUser_New">
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="notgooduser" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="UserEdit" Parameter="userEdit" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="ip" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="pcName" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="doMainName" Type="System.String" DbType="NVarChar(255)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdateOutSourceProject" Method="UpdateOutSourceProject">
+    <Parameter Name="Project" Parameter="project" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Flag" Parameter="flag" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdatePassword" Method="UpdatePassword">
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="PassWordOld" Parameter="passWordOld" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="PassWordNew" Parameter="passWordNew" Type="System.String" DbType="NVarChar(255)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdateTimeFree" Method="UpdateTimeFree">
+    <Parameter Name="Token" Parameter="token" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="freetime" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdateTimeLastRequest" Method="UpdateTimeLastRequest">
+    <Parameter Name="Token" Parameter="token" Type="System.String" DbType="NVarChar(255)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdateTimeLogout" Method="UpdateTimeLogout">
+    <Parameter Name="Token" Parameter="token" Type="System.String" DbType="NVarChar(255)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.updateToken" Method="updateToken">
+    <Parameter Name="username" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="idproject" Type="System.String" DbType="NVarChar(150)" />
+    <Parameter Name="token" Type="System.String" DbType="NVarChar(255)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdateUsername" Method="UpdateUsername">
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="Password" Parameter="password" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="IDRole" Parameter="iDRole" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="IDNhanVien" Parameter="iDNhanVien" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="GroupLevel" Parameter="groupLevel" Type="System.String" DbType="NVarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdateUsername_BaoCaoLuong" Method="UpdateUsername_BaoCaoLuong">
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="Password" Parameter="password" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="IDRole" Parameter="iDRole" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="IDNhanVien" Parameter="iDNhanVien" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="GroupLevel" Parameter="groupLevel" Type="System.String" DbType="NVarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>
