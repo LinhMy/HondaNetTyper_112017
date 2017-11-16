@@ -148,7 +148,7 @@ namespace Honda_Net_Typer.MyForm
 
                     if (string.IsNullOrEmpty(Global.StrBatch))
                     {
-                        MessageBox.Show(@"Please log in again and select Batch!");
+                        MessageBox.Show(@"Đăng nhập và chọn Batch!");
                         return;
                     }
                     string temp = GetImage();
@@ -167,8 +167,6 @@ namespace Honda_Net_Typer.MyForm
                                 btn_Start_Submit_Click(null, null);
                                 SetValue();
                             }
-
-
                         }
                         else
                         {
@@ -201,7 +199,7 @@ namespace Honda_Net_Typer.MyForm
                         var version = (from w in Global.DbBpo.tbl_Versions where w.IDProject == Global.StrIdProject select w.IDVersion).FirstOrDefault();
                         if (version != Global.Version)
                         {
-                            MessageBox.Show(@"The current version is out of date, please update to the new version!");
+                            MessageBox.Show(@"Cập nhật Version mới!");
                             Process.Start(Global.UrlUpdateVersion);
                             Application.Exit();
                         }
@@ -213,14 +211,14 @@ namespace Honda_Net_Typer.MyForm
                     }
                     else
                     {
-                        MessageBox.Show("Bạn không có quyền nhập So");
+                        MessageBox.Show("Bạn không có quyền nhập Số");
                     }
                     SetValue();
                 }
             }
             catch (Exception i)
             {
-                MessageBox.Show(@"Error Submit" + i.Message);
+                MessageBox.Show(@"Lỗi Submit" + i.Message);
             }
         }
 
@@ -236,7 +234,7 @@ namespace Honda_Net_Typer.MyForm
 
                 if (token != Global.StrToken)
                 {
-                    MessageBox.Show(@"User logged on to another PC, please login again!");
+                    MessageBox.Show(@"User này đang login ở máy khác, vui lòng đăng nhập lại!");
                     DialogResult = DialogResult.Yes;
                 }
                 if (uc_DeSo1.IsEmpty())

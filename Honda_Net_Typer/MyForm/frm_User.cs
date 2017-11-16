@@ -103,12 +103,7 @@ namespace Honda_Net_Typer.MyForm
                 }
             }
         }
-        
-        private void gridView1_GotFocus(object sender, EventArgs e)
-        {
-            
-        }
-
+    
         private void cbb_idrole_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar != 3)

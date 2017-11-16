@@ -29,7 +29,7 @@ namespace Honda_Net_Typer.MyForm
         {
             if (string.IsNullOrEmpty(txt_BatchName.Text))
             {
-                MessageBox.Show(@"Please enter a batch name", @"Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(@"Vui lòng nhập tên Batch!", @"Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 

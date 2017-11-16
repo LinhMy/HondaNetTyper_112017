@@ -42,7 +42,7 @@ namespace Honda_Net_Typer.MyForm
             dataGridView1.DataSource = null;
             if (_firstDateTime >= _lastDateTime)
             {
-                MessageBox.Show(@"Start date must be less than or equal to end date");
+                MessageBox.Show(@"Ngày bắt đầu phải nhỏ hơn ngày kết thúc!");
             }
             else
             {
@@ -61,7 +61,7 @@ namespace Honda_Net_Typer.MyForm
             dataGridView1.DataSource = null;
             if (_firstDateTime > _lastDateTime)
             {
-                MessageBox.Show(@"Start date must be less than or equal to end date");
+                MessageBox.Show(@"Ngày kết thúc phải lớn hơn ngày bắt đầu!");
             }
             else
             {

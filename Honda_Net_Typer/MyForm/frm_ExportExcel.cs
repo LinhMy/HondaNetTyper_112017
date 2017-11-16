@@ -17,14 +17,14 @@ namespace Honda_Net_Typer.MyForm
         }
 
         public DateTime date1, date2;
-        private int soloisausua = 0;
-        private int soloi = 0;
+       // private int soloisausua = 0;
+       // private int soloi = 0;
 
         private void btn_Export_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(cbb_Batch.Text))
             {
-                MessageBox.Show(@"Batch not selected .");
+                MessageBox.Show(@"Batch not selected.");
                 return;
             }
 

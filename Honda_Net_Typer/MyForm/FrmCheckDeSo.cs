@@ -51,7 +51,7 @@ namespace Honda_Net_Typer.MyForm
     
         public void LoadBatchMoi()
         {
-            if (MessageBox.Show(@"You want to do the next batch?", @"Notification", MessageBoxButtons.YesNo) == DialogResult.No)
+            if (MessageBox.Show(@"Bạn có muốn chuyển qua Batch tiếp theo không?", @"Notification", MessageBoxButtons.YesNo) == DialogResult.No)
             {
                 Close();
             }
@@ -219,7 +219,7 @@ namespace Honda_Net_Typer.MyForm
             }
             catch (Exception i)
             {
-                MessageBox.Show(@"Error loading data: " + i.Message);
+                MessageBox.Show(@"Lỗi load dữ liệu: " + i.Message);
             }
         }      
         private string GetImage_DeSo()
@@ -265,7 +265,7 @@ namespace Honda_Net_Typer.MyForm
                 var version = (from w in Global.DbBpo.tbl_Versions where w.IDProject == Global.StrIdProject select w.IDVersion).FirstOrDefault();
                 if (version != Global.Version)
                 {
-                    MessageBox.Show(@"The current version is out of date, please update to the new version!");
+                    MessageBox.Show(@"Cập nhật Version mới!");
                     Process.Start(Global.UrlUpdateVersion);
                     Application.Exit();
                 }
@@ -311,7 +311,7 @@ namespace Honda_Net_Typer.MyForm
                 var version = (from w in Global.DbBpo.tbl_Versions where w.IDProject == Global.StrIdProject select w.IDVersion).FirstOrDefault();
                 if (version != Global.Version)
                 {
-                    MessageBox.Show(@"The current version is out of date, please update to the new version!");
+                    MessageBox.Show(@"Cập nhật Version mới!");
                     Process.Start(Global.UrlUpdateVersion);
                     Application.Exit();
                 }
@@ -356,7 +356,7 @@ namespace Honda_Net_Typer.MyForm
                 var version = (from w in Global.DbBpo.tbl_Versions where w.IDProject == Global.StrIdProject select w.IDVersion).FirstOrDefault();
                 if (version != Global.Version)
                 {
-                    MessageBox.Show(@"The current version is out of date, please update to the new version!");
+                    MessageBox.Show(@"Cập nhật Version mới!");
                     Process.Start(Global.UrlUpdateVersion);
                     Application.Exit();
                 }
@@ -391,7 +391,7 @@ namespace Honda_Net_Typer.MyForm
                 var version = (from w in Global.DbBpo.tbl_Versions where w.IDProject == Global.StrIdProject select w.IDVersion).FirstOrDefault();
                 if (version != Global.Version)
                 {
-                    MessageBox.Show(@"The current version is out of date, please update to the new version!");
+                    MessageBox.Show(@"Cập nhật Version mới!");
                     Process.Start(Global.UrlUpdateVersion);
                     Application.Exit();
                 }
@@ -410,7 +410,7 @@ namespace Honda_Net_Typer.MyForm
             }
             catch (Exception i)
             {
-                MessageBox.Show(@"Error : " + i.Message);
+                MessageBox.Show(@"Lỗi : " + i.Message);
             }
         }
 

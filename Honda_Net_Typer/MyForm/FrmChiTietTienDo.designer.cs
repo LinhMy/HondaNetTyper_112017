@@ -234,7 +234,7 @@
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemPopupContainerEdit1});
-            this.gridControl1.Size = new System.Drawing.Size(1078, 626);
+            this.gridControl1.Size = new System.Drawing.Size(1078, 618);
             this.gridControl1.TabIndex = 3;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -342,7 +342,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1078, 758);
+            this.ClientSize = new System.Drawing.Size(1078, 750);
             this.Controls.Add(this.popupContainerControl1);
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.panelControl1);
