@@ -55,6 +55,7 @@
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.fBatchName = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -245,6 +246,7 @@
             this.gridView1.Appearance.OddRow.BackColor2 = System.Drawing.Color.FloralWhite;
             this.gridView1.Appearance.OddRow.Options.UseBackColor = true;
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.fBatchName,
             this.gridColumn1,
             this.gridColumn5,
             this.gridColumn2,
@@ -262,7 +264,7 @@
             this.gridColumn1.FieldName = "idimage";
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 0;
+            this.gridColumn1.VisibleIndex = 1;
             this.gridColumn1.Width = 180;
             // 
             // repositoryItemPopupContainerEdit1
@@ -317,7 +319,7 @@
             this.gridColumn5.FieldName = "UserNameDEJP";
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 1;
+            this.gridColumn5.VisibleIndex = 2;
             this.gridColumn5.Width = 203;
             // 
             // gridColumn2
@@ -326,7 +328,7 @@
             this.gridColumn2.FieldName = "Checker";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 2;
+            this.gridColumn2.VisibleIndex = 3;
             this.gridColumn2.Width = 218;
             // 
             // gridColumn3
@@ -335,8 +337,16 @@
             this.gridColumn3.FieldName = "ThongTin";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 3;
+            this.gridColumn3.VisibleIndex = 4;
             this.gridColumn3.Width = 226;
+            // 
+            // fBatchName
+            // 
+            this.fBatchName.Caption = "Batch";
+            this.fBatchName.FieldName = "fBatchName";
+            this.fBatchName.Name = "fBatchName";
+            this.fBatchName.Visible = true;
+            this.fBatchName.VisibleIndex = 0;
             // 
             // FrmChiTietTienDo
             // 
@@ -393,5 +403,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
+        private DevExpress.XtraGrid.Columns.GridColumn fBatchName;
     }
 }

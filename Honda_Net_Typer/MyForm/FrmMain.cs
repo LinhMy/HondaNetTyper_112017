@@ -86,6 +86,7 @@ namespace Honda_Net_Typer.MyForm
                 bar_Manager.Enabled = false;
                 btn_Stop_Performance_Test.Enabled = false;
                 bar_Manager.Enabled = false;
+                uc_DeSo1.ResetData();
               
                 if (Global.StrRole == "DESO")
                 {
@@ -102,6 +103,7 @@ namespace Honda_Net_Typer.MyForm
                     btn_ZoomImage.Enabled = false;
                     bar_Manager.Enabled = true;
                     btn_Check.Enabled = true;
+                    uc_DeSo1.Visible = false;
                 }
                 else if ( Global.StrRole == "CHECKERDEJP" || Global.StrRole == "CHECKERDECHU" || Global.StrRole == "CHECKERDESO")
                 {
@@ -111,6 +113,7 @@ namespace Honda_Net_Typer.MyForm
                     btn_ZoomImage.Enabled = false;
                     bar_Manager.Enabled = false;
                     btn_Check.Enabled = true;
+                    uc_DeSo1.Visible = false;
                 }
                 else
                 {
@@ -120,6 +123,7 @@ namespace Honda_Net_Typer.MyForm
                     btn_ZoomImage.Enabled = false;
                     bar_Manager.Enabled = false;
                     btn_Check.Enabled = false;
+                    uc_DeSo1.Visible = false;
                 }
             }
             catch (Exception i)

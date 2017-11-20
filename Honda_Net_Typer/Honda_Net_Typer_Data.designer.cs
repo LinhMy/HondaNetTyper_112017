@@ -292,13 +292,6 @@ namespace Honda_Net_Typer
 			return ((ISingleResult<ThongKeTienDoResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ChiTietTienDo")]
-		public ISingleResult<ChiTietTienDoResult> ChiTietTienDo([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string fbatchname)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), fbatchname);
-			return ((ISingleResult<ChiTietTienDoResult>)(result.ReturnValue));
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ChiTietUserDeSo")]
 		public ISingleResult<ChiTietUserDeSoResult> ChiTietUserDeSo([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string fbatchname, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string idimage)
 		{
@@ -311,6 +304,13 @@ namespace Honda_Net_Typer
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
 			return ((ISingleResult<ChiTietTienDo_AllResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ChiTietTienDo")]
+		public ISingleResult<ChiTietTienDoResult> ChiTietTienDo([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string fbatchname)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), fbatchname);
+			return ((ISingleResult<ChiTietTienDoResult>)(result.ReturnValue));
 		}
 	}
 	
@@ -2271,8 +2271,36 @@ namespace Honda_Net_Typer
 		}
 	}
 	
-	public partial class ChiTietTienDoResult
+	public partial class ChiTietUserDeSoResult
 	{
+		
+		private string _UserName;
+		
+		public ChiTietUserDeSoResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserName", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string UserName
+		{
+			get
+			{
+				return this._UserName;
+			}
+			set
+			{
+				if ((this._UserName != value))
+				{
+					this._UserName = value;
+				}
+			}
+		}
+	}
+	
+	public partial class ChiTietTienDo_AllResult
+	{
+		
+		private string _fBatchName;
 		
 		private string _idimage;
 		
@@ -2284,8 +2312,24 @@ namespace Honda_Net_Typer
 		
 		private string _ThongTin;
 		
-		public ChiTietTienDoResult()
+		public ChiTietTienDo_AllResult()
 		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fBatchName", DbType="NVarChar(150) NOT NULL", CanBeNull=false)]
+		public string fBatchName
+		{
+			get
+			{
+				return this._fBatchName;
+			}
+			set
+			{
+				if ((this._fBatchName != value))
+				{
+					this._fBatchName = value;
+				}
+			}
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idimage", DbType="NVarChar(150) NOT NULL", CanBeNull=false)]
@@ -2369,34 +2413,10 @@ namespace Honda_Net_Typer
 		}
 	}
 	
-	public partial class ChiTietUserDeSoResult
+	public partial class ChiTietTienDoResult
 	{
 		
-		private string _UserName;
-		
-		public ChiTietUserDeSoResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserName", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
-		public string UserName
-		{
-			get
-			{
-				return this._UserName;
-			}
-			set
-			{
-				if ((this._UserName != value))
-				{
-					this._UserName = value;
-				}
-			}
-		}
-	}
-	
-	public partial class ChiTietTienDo_AllResult
-	{
+		private string _fBatchName;
 		
 		private string _idimage;
 		
@@ -2408,8 +2428,24 @@ namespace Honda_Net_Typer
 		
 		private string _ThongTin;
 		
-		public ChiTietTienDo_AllResult()
+		public ChiTietTienDoResult()
 		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fBatchName", DbType="NVarChar(150) NOT NULL", CanBeNull=false)]
+		public string fBatchName
+		{
+			get
+			{
+				return this._fBatchName;
+			}
+			set
+			{
+				if ((this._fBatchName != value))
+				{
+					this._fBatchName = value;
+				}
+			}
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idimage", DbType="NVarChar(150) NOT NULL", CanBeNull=false)]

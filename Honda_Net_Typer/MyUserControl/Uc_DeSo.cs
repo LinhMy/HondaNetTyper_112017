@@ -116,6 +116,7 @@ namespace Honda_Net_Typer.MyUserControl
             {
                 txt_Phieu1.Focus();
             }
+            
         }
 
         private void txt_Phieu3_KeyUp(object sender, KeyEventArgs e)
@@ -272,6 +273,114 @@ namespace Honda_Net_Typer.MyUserControl
             else if (e.KeyCode == Keys.Up)
             {
                 txt_Phieu11.Focus();
+            }
+        }
+
+        private void txt_Phieu2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == '/') {
+                txt_Phieu2.Text = txt_Phieu1.Text;
+                e.Handled = true;
+            }
+        }
+
+        private void txt_Phieu3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == '/')
+            {
+                e.Handled = true;
+                txt_Phieu3.Text = txt_Phieu2.Text;
+                
+            }
+        }
+
+        private void txt_Phieu4_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == '/')
+            {
+                e.Handled = true;
+                txt_Phieu4.Text = txt_Phieu3.Text;
+
+            }
+        }
+
+        private void txt_Phieu5_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == '/')
+            {
+                e.Handled = true;
+                txt_Phieu5.Text = txt_Phieu4.Text;
+
+            }
+        }
+
+        private void txt_Phieu6_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == '/')
+            {
+                e.Handled = true;
+                txt_Phieu6.Text = txt_Phieu5.Text;
+
+            }
+        }
+
+        private void txt_Phieu7_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == '/')
+            {
+                e.Handled = true;
+                txt_Phieu7.Text = txt_Phieu6.Text;
+
+            }
+        }
+
+        private void txt_Phieu8_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == '/')
+            {
+                e.Handled = true;
+                txt_Phieu8.Text = txt_Phieu7.Text;
+
+            }
+        }
+
+        private void txt_Phieu9_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == '/')
+            {
+                e.Handled = true;
+                txt_Phieu9.Text = txt_Phieu8.Text;
+
+            }
+        }
+
+        private void txt_Phieu10_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == '/')
+            {
+                e.Handled = true;
+                txt_Phieu10.Text = txt_Phieu9.Text;
+
+            }
+        }
+
+        private void txt_Phieu11_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == '/')
+            {
+                e.Handled = true;
+                txt_Phieu11.Text = txt_Phieu10.Text;
+
+            }
+        }
+
+        private void txt_Phieu12_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == '/')
+            {
+                e.Handled = true;
+                txt_Phieu12.Text = txt_Phieu11.Text;
+
             }
         }
     }

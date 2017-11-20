@@ -37,18 +37,17 @@ namespace Honda_Net_Typer.MyForm
             }
             var userMissimage = (from w in Global.Db.tbl_MissCheck_DeSos where w.fBatchName == cbb_Batch.Text && w.Submit == 0 select w.UserName).ToList();
             //(from w in Global.Db.UserMissImagecheck(cbb_Batch.Text) select w.UserName).ToList();
-            string sss = "";
+            string nameMissImage = "";
             foreach (var item in userMissimage)
             {
-                sss += item + "\r\n";
+                nameMissImage += item + "\r\n";
             }
 
             if (userMissimage.Count > 0)
             {
-                MessageBox.Show(@"The user took the picture but did not enter: \r\n" + sss);
+                MessageBox.Show(@"The user took the picture but did not enter: \r\n" + nameMissImage);
                 return;
             }
-
             //Kiểm tra check xong chưa
             var xyz = Global.Db.CheckerFinish(cbb_Batch.Text);
             if (xyz != 0)
@@ -56,15 +55,15 @@ namespace Honda_Net_Typer.MyForm
                 MessageBox.Show(@"Not finished check or have user get but not check. Please check first");
 
                 var u = (from w in Global.Db.tbl_MissCheck_DeSos where w.fBatchName == cbb_Batch.Text && w.Submit == 0 select w.UserName).ToList();
-                string sssss = "";
+                string nameMissCheck = "";
                 foreach (var item in u)
                 {
-                    sssss += item + "\r\n";
+                    nameMissCheck += item + "\r\n";
                 }
 
                 if (u.Count > 0)
                 {
-                    MessageBox.Show(@"Checker checklist to check but not check: \r\n" + sssss);
+                    MessageBox.Show(@"Checker checklist to check but not check: \r\n" + nameMissCheck);
                 }
 
                 return;
@@ -158,8 +157,7 @@ namespace Honda_Net_Typer.MyForm
                 return false;
             }
 
-        }
-    
+        }  
        
        private void btnExportError_Click(object sender, EventArgs e)
         {

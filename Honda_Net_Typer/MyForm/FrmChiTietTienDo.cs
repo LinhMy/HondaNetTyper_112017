@@ -77,9 +77,17 @@ namespace Honda_Net_Typer.MyForm
         private void repositoryItemPopupContainerEdit1_Click(object sender, EventArgs e)
         {
             string idimage = gridView1.GetFocusedRowCellValue("idimage").ToString();
-            gridControl2.DataSource = null;
-
-            gridControl2.DataSource = Global.Db.ChiTietUserDeSo(lb_fBatchName.Text, idimage);
+            if (lb_fBatchName.Text == "All")
+            {
+                string fbatchname= gridView1.GetFocusedRowCellValue("fBatchName").ToString();
+                gridControl2.DataSource = null;
+                gridControl2.DataSource = Global.Db.ChiTietUserDeSo(fbatchname, idimage);
+            }
+            else
+            {
+                gridControl2.DataSource = null;
+                gridControl2.DataSource = Global.Db.ChiTietUserDeSo(lb_fBatchName.Text, idimage);
+            }
         }
 
        

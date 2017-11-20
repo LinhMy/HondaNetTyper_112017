@@ -188,6 +188,7 @@
             this.txt_Phieu2.Size = new System.Drawing.Size(160, 24);
             this.txt_Phieu2.TabIndex = 2;
             this.txt_Phieu2.EditValueChanged += new System.EventHandler(this.txt_Phieu1_EditValueChanged);
+            this.txt_Phieu2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Phieu2_KeyPress);
             this.txt_Phieu2.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_Phieu2_KeyUp);
             // 
             // txt_Phieu3
@@ -200,6 +201,7 @@
             this.txt_Phieu3.Size = new System.Drawing.Size(160, 24);
             this.txt_Phieu3.TabIndex = 3;
             this.txt_Phieu3.EditValueChanged += new System.EventHandler(this.txt_Phieu1_EditValueChanged);
+            this.txt_Phieu3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Phieu3_KeyPress);
             this.txt_Phieu3.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_Phieu3_KeyUp);
             // 
             // txt_Phieu4
@@ -212,6 +214,7 @@
             this.txt_Phieu4.Size = new System.Drawing.Size(160, 24);
             this.txt_Phieu4.TabIndex = 4;
             this.txt_Phieu4.EditValueChanged += new System.EventHandler(this.txt_Phieu1_EditValueChanged);
+            this.txt_Phieu4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Phieu4_KeyPress);
             this.txt_Phieu4.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_Phieu4_KeyUp);
             // 
             // txt_Phieu5
@@ -224,6 +227,7 @@
             this.txt_Phieu5.Size = new System.Drawing.Size(160, 24);
             this.txt_Phieu5.TabIndex = 5;
             this.txt_Phieu5.EditValueChanged += new System.EventHandler(this.txt_Phieu1_EditValueChanged);
+            this.txt_Phieu5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Phieu5_KeyPress);
             this.txt_Phieu5.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_Phieu5_KeyUp);
             // 
             // txt_Phieu11
@@ -236,6 +240,7 @@
             this.txt_Phieu11.Size = new System.Drawing.Size(160, 24);
             this.txt_Phieu11.TabIndex = 11;
             this.txt_Phieu11.EditValueChanged += new System.EventHandler(this.txt_Phieu1_EditValueChanged);
+            this.txt_Phieu11.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Phieu11_KeyPress);
             this.txt_Phieu11.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_Phieu11_KeyUp);
             // 
             // txt_Phieu7
@@ -248,6 +253,7 @@
             this.txt_Phieu7.Size = new System.Drawing.Size(160, 24);
             this.txt_Phieu7.TabIndex = 7;
             this.txt_Phieu7.EditValueChanged += new System.EventHandler(this.txt_Phieu1_EditValueChanged);
+            this.txt_Phieu7.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Phieu7_KeyPress);
             this.txt_Phieu7.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_Phieu7_KeyUp);
             // 
             // txt_Phieu8
@@ -260,6 +266,7 @@
             this.txt_Phieu8.Size = new System.Drawing.Size(160, 24);
             this.txt_Phieu8.TabIndex = 8;
             this.txt_Phieu8.EditValueChanged += new System.EventHandler(this.txt_Phieu1_EditValueChanged);
+            this.txt_Phieu8.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Phieu8_KeyPress);
             this.txt_Phieu8.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_Phieu8_KeyUp);
             // 
             // txt_Phieu9
@@ -272,6 +279,7 @@
             this.txt_Phieu9.Size = new System.Drawing.Size(160, 24);
             this.txt_Phieu9.TabIndex = 9;
             this.txt_Phieu9.EditValueChanged += new System.EventHandler(this.txt_Phieu1_EditValueChanged);
+            this.txt_Phieu9.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Phieu9_KeyPress);
             this.txt_Phieu9.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_Phieu9_KeyUp);
             // 
             // txt_Phieu10
@@ -284,6 +292,7 @@
             this.txt_Phieu10.Size = new System.Drawing.Size(160, 24);
             this.txt_Phieu10.TabIndex = 10;
             this.txt_Phieu10.EditValueChanged += new System.EventHandler(this.txt_Phieu1_EditValueChanged);
+            this.txt_Phieu10.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Phieu10_KeyPress);
             this.txt_Phieu10.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_Phieu10_KeyUp);
             // 
             // txt_Phieu12
@@ -296,6 +305,7 @@
             this.txt_Phieu12.Size = new System.Drawing.Size(160, 24);
             this.txt_Phieu12.TabIndex = 12;
             this.txt_Phieu12.EditValueChanged += new System.EventHandler(this.txt_Phieu1_EditValueChanged);
+            this.txt_Phieu12.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Phieu12_KeyPress);
             this.txt_Phieu12.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_Phieu12_KeyUp);
             // 
             // txt_Phieu6
@@ -308,6 +318,7 @@
             this.txt_Phieu6.Size = new System.Drawing.Size(160, 24);
             this.txt_Phieu6.TabIndex = 6;
             this.txt_Phieu6.EditValueChanged += new System.EventHandler(this.txt_Phieu1_EditValueChanged);
+            this.txt_Phieu6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Phieu6_KeyPress);
             this.txt_Phieu6.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_Phieu6_KeyUp);
             // 
             // label11

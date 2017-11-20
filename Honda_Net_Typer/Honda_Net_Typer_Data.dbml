@@ -243,16 +243,6 @@
       <Column Name="soluong" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
-  <Function Name="dbo.ChiTietTienDo" Method="ChiTietTienDo">
-    <Parameter Name="fbatchname" Type="System.String" DbType="NVarChar(255)" />
-    <ElementType Name="ChiTietTienDoResult">
-      <Column Name="idimage" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
-      <Column Name="UserNameDESo" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
-      <Column Name="Checker" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
-      <Column Name="DateCheck" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="ThongTin" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
-    </ElementType>
-  </Function>
   <Function Name="dbo.ChiTietUserDeSo" Method="ChiTietUserDeSo">
     <Parameter Name="fbatchname" Type="System.String" DbType="NVarChar(255)" />
     <Parameter Name="idimage" Type="System.String" DbType="NVarChar(255)" />
@@ -262,6 +252,18 @@
   </Function>
   <Function Name="dbo.ChiTietTienDo_All" Method="ChiTietTienDo_All">
     <ElementType Name="ChiTietTienDo_AllResult">
+      <Column Name="fBatchName" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="idimage" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="UserNameDESo" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Checker" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="DateCheck" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ThongTin" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ChiTietTienDo" Method="ChiTietTienDo">
+    <Parameter Name="fbatchname" Type="System.String" DbType="NVarChar(255)" />
+    <ElementType Name="ChiTietTienDoResult">
+      <Column Name="fBatchName" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
       <Column Name="idimage" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
       <Column Name="UserNameDESo" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
       <Column Name="Checker" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
